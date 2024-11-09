@@ -1,0 +1,132 @@
+/* Reset and base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #e3f2fd, #ffffff); /* Light gradient */
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Fixed Header styles */
+header {
+    position: fixed; /* Make the header fixed */
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    color: white;
+    padding: 1rem 2rem; /* Adjust padding for better spacing */
+    display: flex; /* Use flex for layout */
+    justify-content: space-between; /* Space between logo and nav */
+    align-items: center; /* Center items vertically */
+    z-index: 1000; /* Ensure it stays above other content */
+}
+
+/* Logo styles */
+header h1 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Navigation styles */
+nav {
+    display: flex;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+    transition: color 0.3s;
+    font-size: 18px;
+}
+
+nav a:hover {
+    color: #4facfe; /* Hover effect */
+}
+
+/* Main section styles */
+section {
+    flex: 1;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 80px auto 0; /* Add margin-top to prevent overlap with fixed header */
+    background: #ffffff; /* White background for content */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+    font-size: 24px;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 1rem; /* Space between sections */
+}
+
+li {
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+li:hover {
+    background-color: #e0f7fa; /* Light cyan on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Nested list for exam scores */
+ul ul {
+    margin-left: 20px; /* Indent nested lists */
+    padding-left: 10px; /* Additional padding for clarity */
+}
+
+ul ul li {
+    background-color: #f0f0f0; /* Slightly different background for nested items */
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: relative; /* Changed to allow flow */
+    width: 100%;
+    bottom: 0;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Stack nav links on smaller screens */
+    }
+
+    section {
+        padding: 1.5rem;
+    }
+
+    h3 {
+        font-size: 22px; /* Slightly smaller for mobile */
+    }
+
+    li {
+        font-size: 16px; /* Adjust list item font size */
+    }
+}

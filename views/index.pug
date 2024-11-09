@@ -1,0 +1,136 @@
+extends layout
+
+block content
+  header.header
+    nav.navbar.container
+      div.logo ExamHub
+      div.hamburger#hamburger
+        i.fas.fa-bars
+      ul.nav-links#nav-links
+        li
+          a(href="#features") Features
+        li
+          a(href="#testimonials") Testimonials
+        li
+          a(href="#pricing") Pricing
+        li
+          a(href="#faq") FAQ
+        li
+          a(href="#contact") Contact
+        li
+          a(href="/student_login") Student Login
+        li
+          a(href="/admin_login") Admin Login
+
+  section.hero
+    .hero-content.container
+      h1 Transform Your Examination Process
+      p Efficient, secure, and reliable online exam solutions for academic institutions and businesses.
+      a.primary-btn(href="#features") Get Started
+
+  section#features.features
+    .container
+      h2.section-title Our Key Features
+      .feature-grid
+        .feature-item
+          h3 Secure Remote Proctoring
+          p Advanced AI-based monitoring for a cheat-proof exam environment.
+        .feature-item
+          h3 Customizable Exam Templates
+          p Design exams that fit your exact requirements with a wide range of question types.
+        .feature-item
+          h3 In-depth Analytics
+          p Track and analyze exam results in real-time, with advanced reporting tools.
+        .feature-item
+          h3 Seamless Integrations
+          p Integrates effortlessly with popular LMS and CRM platforms.
+        .feature-item
+          h3 Mobile-Friendly Interface
+          p Access exams and monitor results from any device, anywhere.
+        .feature-item
+          h3 Multi-language Support
+          p Support exams in various languages, enhancing accessibility for global users.
+
+  section#testimonials.testimonials
+    .container
+      h2.section-title What Our Clients Say
+      .testimonial-grid
+        .testimonial-item
+          p "ExamHub has revolutionized the way we conduct exams. It's secure and easy to use."
+          h4 Koushik, Vignan University
+        .testimonial-item
+          p "The proctoring feature is fantastic and ensures the integrity of the exam process."
+          h4 Sandeep, KL University
+        .testimonial-item
+          p "We’ve increased exam efficiency by 50% with ExamHub’s intuitive design."
+          h4 Gowtham, VFSTR
+
+  section#pricing.pricing
+    .container
+      h2.section-title Pricing Plans
+      .pricing-grid
+        .pricing-item
+          h3 Basic
+          p RS.299/month
+          ul
+            li Up to 100 candidates
+            li Basic Reporting
+            li Email Support
+          a.primary-btn(href="#") Choose Plan
+        .pricing-item
+          h3 Standard
+          p RS.499/month
+          ul
+            li Up to 500 candidates
+            li Advanced Reporting
+            li 24/7 Support
+          a.primary-btn(href="#") Choose Plan
+        .pricing-item
+          h3 Enterprise
+          p Contact Us
+          ul
+            li Unlimited candidates
+            li Custom Reporting
+            li Dedicated Account Manager
+          a.primary-btn(href="#") Contact Us
+
+  section#faq.faq
+    .container
+      h2.section-title Frequently Asked Questions
+      .faq-grid
+        .faq-item
+          h4 How secure is ExamHub?
+          p We use advanced encryption and AI-powered proctoring to ensure that all exams are conducted securely.
+        .faq-item
+          h4 Can I integrate ExamHub with my LMS?
+          p Yes, we support integrations with popular learning management systems like Moodle and Canvas.
+        .faq-item
+          h4 Do you offer a free trial?
+          p Yes, we offer a 14-day free trial with access to all features.
+
+  section#contact.contact
+    .container
+      h2.section-title Contact Us
+      form.contact-form
+        input(type="text", placeholder="Your Name", required)
+        input(type="email", placeholder="Your Email", required)
+        textarea(placeholder="Your Message", required)
+        button.primary-btn(type="submit") Send Message
+
+  footer.footer
+    .container
+      .footer-links
+        a(href="#features") Features
+        a(href="#testimonials") Testimonials
+        a(href="#pricing") Pricing
+        a(href="#faq") FAQ
+        a(href="#contact") Contact
+      .footer-info
+        p &copy; 2024 ExamHub. All rights reserved.
+        .social-icons
+          a(href="#")
+            i.fab.fa-facebook-f
+          a(href="#")
+            i.fab.fa-linkedin-in
+          a(href="#")
+            i.fab.fa-twitter

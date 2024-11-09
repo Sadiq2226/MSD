@@ -1,0 +1,24 @@
+doctype html
+html(lang="en")
+  head
+    title Student Registration
+    link(rel="stylesheet", href="assets/css/styles.css")
+    script(src="assets/js/formValidation.js")
+  body
+    header
+      h1 Student Registration
+      nav
+        a(href="/") Home
+        a(href="/student_login") Login
+    .form-container
+    form(name="registrationForm", action="/student_register", method="POST")
+      input(type="text", name="name", placeholder="Name", required)
+      input(type="text", name="studentId", placeholder="Student ID", required) 
+      input(type="text", name="mobile", placeholder="Mobile", required)
+      input(type="email", name="email", placeholder="Email", required)
+      input(type="password", name="password", placeholder="Password", required)
+      input(type="text", name="institution", placeholder="Institution", required)
+      button(type="submit") Register
+
+    footer
+      p &copy; 2024 Exam Hub

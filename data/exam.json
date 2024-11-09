@@ -1,0 +1,29 @@
+[
+  {
+    "examName": "Math Exam",
+    "subject": "Mathematics",
+    "date": "2023-10-10",
+    "questions": "Question text...",
+    "answers": "Answer text...",
+    "studentRollNumber": "4057"
+  },
+  {
+    "examName": "Science Exam",
+    "subject": "Science",
+    "date": "2023-10-15",
+    "questions": "Question text...",
+    "answers": "Answer text...",
+    "studentRollNumber": "67890"
+  },
+  {
+    "examName": "GK",
+    "subject": "GK",
+    "date": "2024-10-19",
+    "questions": [
+      "Who is Koushik"
+    ],
+    "answers": [
+      "me"
+    ]
+  }
+]

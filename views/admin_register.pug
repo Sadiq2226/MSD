@@ -1,0 +1,22 @@
+doctype html
+html(lang="en")
+  head
+    title Admin Registration
+    link(rel="stylesheet", href="assets/css/styles.css")
+    script(src="assets/js/formValidation.js")
+  body
+    header
+      h1 Admin Registration
+      nav
+        a(href="/") Home
+        a(href="/admin_login") Login
+    .form-container
+      form(name="registrationForm", action="/admin_register", method="POST", onsubmit="return validateRegistrationForm()")
+        input(type="text", name="institution", placeholder="Your Institution", required)
+        input(type="text", name="name", placeholder="Your Name", required)
+        input(type="email", name="email", placeholder="Your Email", required)
+        input(type="password", name="password", placeholder="Password", required)
+        input(type="password", name="confirm_password", placeholder="Confirm Password", required)
+        button(type="submit") Register
+    footer
+      p &copy; 2024 Exam Hub

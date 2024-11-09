@@ -1,0 +1,30 @@
+[
+  {
+    "name": "ZORO",
+    "rollNumber": "4057",
+    "mobile": "6302096802",
+    "email": "pardhivkrishna2004@gmail.com",
+    "password": "Zoro123",
+    "role": "student"
+  },
+  {
+    "name": "gojo",
+    "email": "maddinenisrikanth0@gmail.com",
+    "password": "gojo123",
+    "role": "admin"
+  },
+  {
+    "name": "Pathan Sadiqkhan",
+    "rollNumber": "4052",
+    "mobile": "06300710321",
+    "email": "psadiqkhan43@gmail.com",
+    "password": "sadiq",
+    "role": "student"
+  },
+  {
+    "name": "koushik",
+    "email": "ddrake1925@gmail.com",
+    "password": "tryy",
+    "role": "admin"
+  }
+]

@@ -1,0 +1,37 @@
+extends layout
+
+block content
+    // Link the custom CSS file
+    link(rel="stylesheet", href="assets/css/dashboard.css")
+
+    // Navigation Bar
+    header
+      nav
+        div.navbar
+          h1.logo ExamHub
+          ul.nav-links
+            li
+              a(href='/student_dashboard') Dashboard
+            li
+              a(href='/logout') Logout
+
+    .container
+        h1 Welcome, #{student.name}
+        h2 Upcoming Exams
+        if upcomingExams && upcomingExams.length > 0
+            ul
+                each exam in upcomingExams
+                    li= exam.examName + " on " + exam.date
+        else
+            p No upcoming exams
+
+        h3 Previous Scores
+        if exams && exams.length > 0
+            ul
+                each exam in exams
+                    li= exam.examName + " - Score: " + (exam.score || "N/A")
+        else
+            p No previous scores available.
+
+    footer
+        p &copy; 2024 ExamHub

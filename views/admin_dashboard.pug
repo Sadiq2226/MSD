@@ -1,0 +1,31 @@
+doctype html
+html(lang="en")
+  head
+    title Admin Dashboard
+    link(rel="stylesheet", href="/assets/css/styles.css")
+  body
+    header
+      h1 ExamHub 
+      nav
+        a(href="/create_exam") Create Exam
+        a(href="/view_student_performance") View Students Performance
+        a(href="/logout") Logout
+    section
+      h3 Students Performance
+
+      if students && students.length > 0
+        each student in students
+          ul
+            li= student.name + ' (' + student.studentId + ')'
+
+            if student.examScores && student.examScores.length > 0
+              ul
+                each score in student.examScores
+                  li= 'Exam: ' + score.examId.examName + ' - Score: ' + score.score
+            else
+              li No scores available
+      else
+        p No students registered.
+
+    footer
+      p &copy; 2024 Exam Hub

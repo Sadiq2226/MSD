@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h2 Taking Exam: #{exam.name}
+  form(action=`/submit_exam/${exam.id}`, method="POST")
+    each question, index in exam.questions
+      .question
+        h4 Question #{index + 1}: #{question.text}
+        each option, optIndex in question.options
+          label
+            input(type="radio", name="q#{index}", value=optIndex)
+            | #{option}
+    button(type="submit") Submit Exam

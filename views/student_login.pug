@@ -1,0 +1,25 @@
+html(lang="en")
+  head
+    title Student Login
+    link(rel="stylesheet", href="assets/css/styles.css")
+    script(src="assets/js/formValidation.js")
+  body
+    header
+      h1 ExamHub
+      nav
+        a(href="/") Back to Home
+    .form-container
+      form(name="studentLoginForm", action="/student_login", method="POST", onsubmit="return validateForm('studentLogin')")
+        input(type="text" name="email" placeholder="Email" required)
+        input(type="password" name="password" placeholder="Password" required)
+        button(type="submit") Login
+        p Don't have an account? 
+          a(href="/student_register") Register here
+    footer
+      p &copy; 2024 Exam Hub
+
+    // Popup for invalid credentials
+    #popup.popup
+      .popup-content
+        span.close-btn(onclick="closePopup()") &times;
+        p#popup-message

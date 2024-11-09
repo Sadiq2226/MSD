@@ -1,0 +1,26 @@
+html(lang="en")
+  head
+    title Admin Login
+    link(rel="stylesheet", href="assets/css/styles.css")
+    script(src="assets/js/formValidation.js")
+  body
+    header
+      h1 Admin Login
+      nav
+        a(href="/") Back to Home
+    section
+      .login-container
+        form(name="adminLoginForm", action="/admin_login", method="POST", onsubmit="return validateForm('adminLogin')")
+          input(type="text" name="username" placeholder="Username" required)
+          input(type="password" name="password" placeholder="Password" required)
+          button(type="submit") Login
+          p
+            a(href="/admin_register") Don't have an account? Register here
+    footer
+      p &copy; 2024 Exam Hub
+
+    // Popup for invalid credentials
+    #popup.popup
+      .popup-content
+        span.close-btn(onclick="closePopup()") &times;
+        p#popup-message
